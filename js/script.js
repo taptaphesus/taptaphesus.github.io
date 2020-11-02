@@ -1,6 +1,6 @@
 const btn = document.querySelector('.container__btn')
 
-const socket = io('http://178.154.234.248:3000');
+const socket = io('//178.154.234.248:3000');
 let clicks = 0
 
 function UpdateClick(cc) {
