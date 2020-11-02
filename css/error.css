@@ -1,0 +1,16 @@
+body {
+    height: 100vh; 
+    margin: 0; 
+    display: flex; 
+    font-family: 'Roboto', sans-serif;
+    justify-content: center; 
+    align-items: center;
+}
+a {
+    text-decoration: none;
+    color: #0d0d0e;
+}
+#message {
+    display: flex;
+    flex-direction: column;
+}

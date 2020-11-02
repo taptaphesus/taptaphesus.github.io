@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TapTapHesus</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon16.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <audio id="audio">
+        <source src="/source/music.mp3" type="audio/mpeg">
+    </audio>
+    <div id="cursor"><img id="hand-img" src="img/hand.png"></div>
+    <div class="version-app">v. 0.42</div>
+    <div class="container">
+        <div class="container__counter">
+            <div class="container__counter__content">
+                <div class="container__counter__number">У вас 0</div>
+                <img src="img/hand.svg"> 
+            </div>
+            <h2 class="container__counter__text">Раз погладили хесуса</h2>
+        </div>
+        <button class="container__btn"></button>
+        <h3 class="container__date">Дата запуска: 31.10.2020</h3>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.1/socket.io.js" integrity="sha512-AcZyhRP/tbAEsXCCGlziPun5iFvcSUpEz2jKkx0blkYKbxU81F+iq8FURwPn1sYFeksJ+sDDrI5XujsqSobWdQ==" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
