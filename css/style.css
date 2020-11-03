@@ -7,6 +7,10 @@ body {
     padding: 0;
     cursor: none;
     overflow: hidden;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
 }
 h2 {
     color: #A3A3A3;
@@ -89,5 +93,33 @@ button:hover {
 .container__date {
     color: #dadada;
     font-size: 12px;
-    margin: 5px;
+    margin: 30px 0 0 0;
 }
+
+.container__links-content {
+    display: flex;
+    width: 220px;
+    justify-content: space-between;
+}
+.links-content__hesus, .links-content__donate {
+    text-align: center;
+    -moz-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+.links-content__hesus:hover, .links-content__donate:hover {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+@media only screen and (max-width: 768px) {
+    #cursor {
+        display: none;
+    }
+    body, .container__btn {
+        cursor: unset;
+    }
+} 
