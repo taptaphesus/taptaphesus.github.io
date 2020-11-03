@@ -33,6 +33,11 @@ p {
     align-items: center;
     flex-direction: column;
 }
+.container__counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .container__counter__content {
     display: flex;
     justify-content: center;
