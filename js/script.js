@@ -1,6 +1,6 @@
 const btn = document.querySelector('.container__btn')
 
-const socket = io('//178.154.234.248:3000');
+const socket = io('//178.154.234.251:3000');
 let clicks = 0
 
 function UpdateClick(cc) {
@@ -18,4 +18,15 @@ socket.on('click', UpdateClick)
 
 btn.addEventListener('click', () => {
     AddClick()
+})
+btn.addEventListener('mouseup', (e) => {
+    btn.style.backgroundImage = `url('img/hesus.png')`;
+})
+btn.addEventListener('mousedown', (e) => {
+    audio.play()
+    btn.style.backgroundImage = `url('img/hesus_tap.png')`;
+})
+btn.addEventListener('mouseleave', () => {
+    audio.pause()
+    btn.style.backgroundImage = `url('img/hesus.png')`;
 })
