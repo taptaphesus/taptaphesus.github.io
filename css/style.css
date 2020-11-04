@@ -46,8 +46,9 @@ p {
     display: flex;
     justify-content: center;
 }
-.container__counter__content svg {
-    margin: 0 0 0 15px;
+.container__counter__content img {
+    width: 27px;
+    margin: 2px 0 0 15px;
 }
 .container__counter__number {
     font-style: normal;
@@ -123,6 +124,10 @@ p {
         calc( let(--x) * 1px), 
         calc(let(--y) * 1px)
     ) translate(-50%, -50%);
+}
+
+.hand-white {
+    display: none;
 }
 
 @media only screen and (max-width: 768px) {
