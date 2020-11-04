@@ -46,8 +46,7 @@ p {
     display: flex;
     justify-content: center;
 }
-.container__counter__content img {
-    width: 27px;
+.container__counter__content svg {
     margin: 0 0 0 15px;
 }
 .container__counter__number {
