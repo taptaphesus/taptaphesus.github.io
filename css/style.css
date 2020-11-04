@@ -55,9 +55,9 @@ p {
     font-weight: bold;
     font-size: 36px;
 }
-button {
+.container__btn {
     cursor: none;
-    margin: 60px;
+    margin: 50px 0 50px 0;
     -moz-transition: all .3s ease-out;
     -o-transition: all .3s ease-out;
     -webkit-transition: all .3s ease-out;
@@ -67,11 +67,6 @@ button {
     background-repeat : no-repeat;
     background-image: url('../img/hesus.png');
     padding: 0;
-    outline: none;
-    border: none;
-    font: inherit;
-    color: inherit;
-    background-color: transparent;
 }
 button:hover {
     -webkit-transform: scale(.95);
