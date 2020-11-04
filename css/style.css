@@ -98,17 +98,17 @@ button:hover {
 
 .container__links-content {
     display: flex;
-    width: 220px;
+    width: 320px;
     justify-content: space-between;
 }
-.links-content__hesus, .links-content__donate {
+.links-content__hesus, .links-content__donate, .links-content__dev {
     text-align: center;
     -moz-transition: all .3s ease-out;
     -o-transition: all .3s ease-out;
     -webkit-transition: all .3s ease-out;
     transition: all .3s ease-out;
 }
-.links-content__hesus:hover, .links-content__donate:hover {
+.links-content__hesus:hover, .links-content__donate:hover, .links-content__dev:hover {
     -webkit-transform: scale(1.05);
     -moz-transform: scale(1.05);
     -o-transform: scale(1.05);
