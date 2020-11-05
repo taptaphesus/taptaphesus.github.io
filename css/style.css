@@ -130,14 +130,7 @@ p {
     display: none;
 }
 
-@media only screen and (max-width: 768px) {
-    #cursor {
-        display: none;
-    }
-    body, .container__btn {
-        cursor: unset;
-    }
-} 
+
 
 .treat {
     --scale-x: 0;
@@ -160,3 +153,35 @@ p {
     pointer-events: none;
     animation: treat-enter 0.1s ease-in backwards, treat-exit 300ms linear calc((var(--lifetime, 3000) * 1ms) - 300ms) forwards;
 }
+
+.container__point-up {
+    position: relative;
+}
+.container__point-up__add-point {
+    color: #b3ce18;
+    position: absolute;
+    top: -45px;
+    left: -25px;
+    align-self: flex-end;
+    font-size: 24px;
+    font-weight: 700;
+    animation-duration: 2s;
+    transform-origin: bottom;
+    animation-name: pointUp;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes pointUp {
+    0%   { color: #b3ce18; transform: translateY(0); }
+    100%   { opacity: 0; color: #b3ce18; transform: translateY(-50px);  }
+}
+
+@media only screen and (max-width: 768px) {
+    #cursor {
+        display: none;
+    }
+    body, .container__btn {
+        cursor: unset;
+    }
+} 

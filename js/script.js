@@ -1,8 +1,15 @@
 const btn = document.querySelector('.container__btn')
+const tips = document.querySelector(".container__point-up")
+
 
 const socket = io()
 let clicks = 0
 let lastClick = 0
+
+tips.addEventListener('animationend', function() {
+    document.querySelector(".container__point-up__add-point").remove()
+})
+
 
 function UpdateClick(cc) {
     clicks = cc
@@ -39,9 +46,16 @@ socket.on('click', UpdateClick)
 
 //     lastClick = t
 // }
+function pointup() {
+    const tip = document.createElement("h1")
+    tip.innerHTML = "+1";
+    tip.classList.add("container__point-up__add-point");
+    tips.appendChild(tip)
+}
 
 btn.addEventListener('click', () => {
     audio.play()
+    pointup()
     // intervalClick()
     AddClick()
 })
