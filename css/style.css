@@ -93,17 +93,20 @@ p {
 
 .container__links-content {
     display: flex;
-    width: 320px;
+    width: 280px;
     justify-content: space-between;
 }
-.links-content__hesus, .links-content__donate, .links-content__dev {
+.links-content__hesus img, .links-content__donate img, .links-content__dev img {
     text-align: center;
     -moz-transition: all .3s ease-out;
     -o-transition: all .3s ease-out;
     -webkit-transition: all .3s ease-out;
     transition: all .3s ease-out;
 }
-.links-content__hesus:hover, .links-content__donate:hover, .links-content__dev:hover {
+.links-content__hesus, .links-content__donate, .links-content__dev  {
+    text-align: center;
+}
+.links-content__hesus img:hover, .links-content__donate img:hover, .links-content__dev img:hover {
     -webkit-transform: scale(1.05);
     -moz-transform: scale(1.05);
     -o-transform: scale(1.05);
