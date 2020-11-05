@@ -9,12 +9,11 @@ document.addEventListener('mousedown', () => {
     hand_img.src = 'img/hand_tap.png'
 })
 
-
+function move( obj, event ) {
+    obj.style = '';
+    obj.style.top = event.clientY + 'px';
+    obj.style.left = event.clientX + 'px';
+}
 document.addEventListener('mousemove', (e) => {
-    if (document.documentElement.clientWidth > 768) {
-        let x = e.clientX - 50
-        let y = e.clientY - 40
-        cursor.style.left = `${x}px`
-        cursor.style.top = `${y}px`
-    }
+    move( cursor, e );
 })
