@@ -175,6 +175,13 @@ p {
     animation-fill-mode: forwards;
 }
 
+.container__users-online {
+    position: absolute;
+    left: 15px;
+    bottom: 10px;
+    opacity: .75;
+}
+
 @keyframes pointUp {
     0%   { color: #b3ce18; transform: translateY(0); }
     100%   { opacity: 0; color: #b3ce18; transform: translateY(-50px);  }

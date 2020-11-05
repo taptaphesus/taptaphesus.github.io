@@ -5,6 +5,7 @@ const tips = document.querySelector(".container__point-up")
 const socket = io()
 let clicks = 0
 let lastClick = 0
+let clientsCount = 1;
 
 tips.addEventListener('animationend', function() {
     document.querySelector(".container__point-up__add-point").remove()
@@ -16,6 +17,11 @@ function UpdateClick(cc) {
     document.querySelector('.container__counter__number').textContent = clicks
 }
 
+function UpdateUsers(count) {
+    clientsCount = count
+    document.querySelector('.container__users-online').textContent = `Онлайн: ${clientsCount}`
+}
+
 function AddClick() {
     UpdateClick(clicks + 1)
     socket.emit('click')
@@ -23,6 +29,7 @@ function AddClick() {
 
 socket.on('connection', UpdateClick)
 socket.on('click', UpdateClick)
+socket.on('updateUserCount', UpdateUsers)
 // let interval, t
 // function intervalClick() {
 //     audio.play()
