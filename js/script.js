@@ -27,32 +27,45 @@ function AddClick() {
     socket.emit('click')
 }
 
+function debounce(f, ms) {
+
+    let isCooldown;
+    
+    return function() {
+        clearTimeout(isCooldown)
+        isCooldown = setTimeout(() => {
+            f()
+        }, ms);
+    };
+  
+}
+
+const pauseClick = debounce(() => {
+    audio.pause()
+    audio.playbackRate = 1.0
+    console.log('pause')
+}, 1000)
+
 socket.on('connection', UpdateClick)
 socket.on('click', UpdateClick)
 socket.on('updateUserCount', UpdateUsers)
-// let interval, t
-// function intervalClick() {
-//     audio.play()
-//     var d = new Date()
-//     t = d.getTime()
-//     interval = t - lastClick
-//     console.log(t + " | " + interval + " | " + audio.playbackRate)
-    
-//     if(interval <= 150) {
-//         audio.playbackRate = 2.0;
-//     } 
-//     else if (interval >= 250 && interval <= 500) {
-//         audio.playbackRate = 1.0;
-//     }
-//     else if (interval >= 500 && interval <= 700) {
-//         audio.playbackRate = 0.5;
-//     }
-//     else if(interval >= 700) {
-//             audio.pause()
-//     }
 
-//     lastClick = t
-// }
+function intervalClick() {
+    audio.play()
+    var d = new Date()
+    let t = d.getTime()
+    let interval = t - lastClick
+    console.log(t + " | " + interval + " | " + audio.playbackRate)
+    pauseClick()
+    if(interval <= 150) {
+        audio.playbackRate = 2.0;
+    } 
+    else if (interval >= 150 && interval <= 500) {
+        audio.playbackRate = 1.0;
+    }
+
+    lastClick = t
+}
 function pointup() {
     const tip = document.createElement("h1")
     tip.innerHTML = "+1";
@@ -61,9 +74,8 @@ function pointup() {
 }
 
 btn.addEventListener('click', () => {
-    audio.play()
     pointup()
-    // intervalClick()
+    intervalClick()
     AddClick()
 })
 btn.addEventListener('mouseup', (e) => {
