@@ -67,7 +67,8 @@ p {
     width: 250px;
     height: 250px;
     background-repeat : no-repeat;
-    background-image: url('../img/hesus.png');
+    background-image: url('../img/tapanim.png');
+    animation: anim 0.3s steps(20);
     padding: 0;
 }
 .container__btn:hover {
@@ -187,6 +188,10 @@ p {
 @keyframes pointUp {
     0%   { color: #b3ce18; transform: translateY(0); }
     100%   { opacity: 0; color: #b3ce18; transform: translateY(-50px);  }
+}
+
+@keyframes anim {
+    100% { background-position: -5000px; }
 }
 
 @media only screen and (max-width: 768px) {

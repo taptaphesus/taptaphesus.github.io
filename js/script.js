@@ -74,19 +74,26 @@ function pointup() {
     tips.appendChild(tip)
 }
 
+function resetAnim(el) {
+    el.style.animation = 'none';
+    el.offsetHeight; /* trigger reflow to apply the change immediately */
+    el.style.animation = null;
+}
+
 btn.addEventListener('click', () => {
     pointup()
     onplayssound()
     intervalClick()
     AddClick()
+    resetAnim(btn)
 })
-btn.addEventListener('mouseup', (e) => {
-    btn.style.backgroundImage = `url('img/hesus.png')`
-})
-btn.addEventListener('mousedown', (e) => {
-    btn.style.backgroundImage = `url('img/hesus_tap.png')`
-})
+// btn.addEventListener('mouseup', (e) => {
+//     btn.style.backgroundImage = `url('img/hesus.png')`
+// })
+// btn.addEventListener('mousedown', (e) => {
+//     btn.style.backgroundImage = `url('img/hesus_tap.png')`
+// })
 btn.addEventListener('mouseleave', () => {
     audio.pause()
-    btn.style.backgroundImage = `url('img/hesus.png')`
+    // btn.style.backgroundImage = `url('img/hesus.png')`
 })
