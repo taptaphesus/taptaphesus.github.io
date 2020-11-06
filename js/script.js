@@ -57,13 +57,14 @@ function intervalClick() {
     let interval = t - lastClick
     console.log(t + " | " + interval + " | " + audio.playbackRate)
     pauseClick()
-    if(interval <= 150) {
-        audio.playbackRate = 2.0;
-    } 
-    else if (interval >= 150 && interval <= 500) {
-        audio.playbackRate = 1.0;
+    if(document.documentElement.clientWidth > 768) {
+        if(interval <= 150) {
+            audio.playbackRate = 2.0;
+        } 
+        else if (interval >= 150 && interval <= 500) {
+            audio.playbackRate = 1.0;
+        }
     }
-
     lastClick = t
 }
 function pointup() {
