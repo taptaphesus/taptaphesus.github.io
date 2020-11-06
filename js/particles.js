@@ -13,7 +13,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-const treatmojis = ["Асу Асу", "Щекотно", "Хватит", "Аы", "Эээ", "Эээ Джиган топ", "А да?", "Ну да", "А?"];
+const treatmojis = ["Асу Асу", "Щекотно", "Хватит", "Аы", "Ээээ", "Эээ Джиган топ", "А да?", "Ну да", "А?", "Барни", "Бабабуй", "кста"];
 const treats = [];
 const radius = 15;
 
