@@ -7,14 +7,23 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon16.png">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stylegift.css">
 </head>
 <body>
+    <div class="gift-container">
+        <div class="gift-container__content">
+            <h1>УРА!!</h1>
+            <div class="gift-container__content__text">Уже 5000000</div>
+            <img src="img/pog.png">
+        </div>
+        <div class="gift-container__bg"></div>
+    </div>
     <audio id="audio">
         <source src="source/music.mp3" type="audio/mpeg">
     </audio>
     <div id="cursor"><img id="hand-img" src="img/hand.png"></div>
     <div class="container">
-        <div class="container__users-online">Онлайн: 1</div>
+        <div class="container__users-online">Онлайн:</div>
         <div class="container__counter">
             <div class="container__counter__content">
                 <div class="container__counter__number">У вас 0</div>
@@ -44,6 +53,7 @@
         <h3 class="container__date">Дата запуска: 31.10.2020</h3>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.1/socket.io.js" integrity="sha512-AcZyhRP/tbAEsXCCGlziPun5iFvcSUpEz2jKkx0blkYKbxU81F+iq8FURwPn1sYFeksJ+sDDrI5XujsqSobWdQ==" crossorigin="anonymous"></script>
+    <script src="js/tada.js"></script>
     <script src="js/audio.js"></script>
     <script src="js/cursor.js"></script>
     <script src="js/script.js"></script>

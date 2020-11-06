@@ -39,7 +39,6 @@ function onplayssound() {
     
     audio2.volume = 0.4
     if (audio2.currentTime == 0) {
-        console.log('play')
         audio2.src = snd
         audio2.play()
         audio2.onended=function(){audio2.currentTime = 0}
