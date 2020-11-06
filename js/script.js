@@ -75,6 +75,7 @@ function pointup() {
 
 btn.addEventListener('click', () => {
     pointup()
+    onplayssound()
     intervalClick()
     AddClick()
 })
