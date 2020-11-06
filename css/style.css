@@ -43,12 +43,14 @@ p {
     align-items: center;
 }
 .container__counter__content {
+    align-items: center;
     display: flex;
     justify-content: center;
 }
 .container__counter__content img {
     width: 27px;
-    margin: 2px 0 0 15px;
+    margin: 0 0 0 15px;
+    height: 27px;
 }
 .container__counter__number {
     font-style: normal;
