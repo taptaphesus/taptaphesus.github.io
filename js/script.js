@@ -43,7 +43,6 @@ function debounce(f, ms) {
 const pauseClick = debounce(() => {
     audio.pause()
     audio.playbackRate = 1.0
-    console.log('pause')
 }, 1000)
 
 socket.on('connection', UpdateClick)
@@ -55,7 +54,6 @@ function intervalClick() {
     var d = new Date()
     let t = d.getTime()
     let interval = t - lastClick
-    console.log(t + " | " + interval + " | " + audio.playbackRate)
     pauseClick()
     if(document.documentElement.clientWidth > 768) {
         if(interval <= 150) {
