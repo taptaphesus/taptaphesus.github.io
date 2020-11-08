@@ -6,6 +6,7 @@
     z-index: 999;
 }
 .gift-container__content {
+    text-align: center;
     position: absolute;
     z-index: 999;
     display: flex;

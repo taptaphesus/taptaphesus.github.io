@@ -84,7 +84,6 @@ btn.addEventListener('click', () => {
     intervalClick()
     AddClick()
     resetAnim(btn)
-    gift()
 })
 
 btn.addEventListener('mouseleave', () => {
